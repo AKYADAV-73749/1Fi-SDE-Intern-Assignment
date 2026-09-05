@@ -1,5 +1,7 @@
 # 1Fi Marketplace
 
+**🌟 Live Demo:** [View the live app here!](https://1-fi-sde-intern-assignment-zeta.vercel.app/)
+
 This repository contains my submission for the 1Fi SDE Intern Assignment. 
 
 ## 🚀 Overview
