@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView, StatusBar, TextInput, Platform } from 'react-native';
-import { Feather } from '@expo/vector-icons';
 import MarketplaceScreen from './src/screens/MarketplaceScreen';
 
 export default function App() {
@@ -38,7 +37,7 @@ export default function App() {
 
           {/* Search Bar (Matching screenshot) */}
           <View style={styles.searchContainer}>
-            <Feather name="search" size={18} color="#9CA3AF" />
+            <Text style={{fontSize: 16, marginRight: 4}}>🔍</Text>
             <TextInput 
               style={styles.searchInput}
               placeholder="Search online stores..."
@@ -59,23 +58,23 @@ export default function App() {
         <View style={styles.bottomNavContainer}>
           <View style={styles.bottomNav}>
             <TouchableOpacity style={styles.navItem}>
-              <Feather name="home" size={20} color="#9CA3AF" />
+              <Text style={styles.iconEmoji}>🏠</Text>
               <Text style={styles.navText}>Home</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.navItem}>
-              <Feather name="shopping-bag" size={20} color="#6C28D9" />
+              <Text style={styles.iconEmoji}>🛍️</Text>
               <Text style={[styles.navText, styles.navTextActive]}>Shop</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.navItem}>
-              <Feather name="file-text" size={20} color="#9CA3AF" />
+              <Text style={styles.iconEmoji}>📄</Text>
               <Text style={styles.navText}>EMI Dues</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.navItem}>
-              <Feather name="bar-chart-2" size={20} color="#9CA3AF" />
+              <Text style={styles.iconEmoji}>📊</Text>
               <Text style={styles.navText}>Limit</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.navItem}>
-              <Feather name="user" size={20} color="#9CA3AF" />
+              <Text style={styles.iconEmoji}>👤</Text>
               <Text style={styles.navText}>Profile</Text>
             </TouchableOpacity>
           </View>
@@ -89,13 +88,13 @@ export default function App() {
 const styles = StyleSheet.create({
   webContainer: { 
     flex: 1, 
-    backgroundColor: '#E5E7EB', // Gray background for the desktop web view
+    backgroundColor: '#E5E7EB', 
     alignItems: 'center' 
   },
   mobileWrapper: { 
     flex: 1, 
     width: '100%', 
-    maxWidth: 480, // Constrains width to look like a mobile phone on web
+    maxWidth: 480, 
     backgroundColor: '#F9FAFB',
     position: 'relative',
     shadowColor: '#000',
@@ -107,7 +106,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 0,
     width: '100%',
-    height: 140, // Purple block behind tabs
+    height: 140, 
     backgroundColor: '#4c1d95',
     borderBottomLeftRadius: 16,
     borderBottomRightRadius: 16,
@@ -175,7 +174,7 @@ const styles = StyleSheet.create({
   },
   content: { 
     flex: 1,
-    paddingBottom: 100 // Leave space so content doesn't hide behind bottom nav
+    paddingBottom: 100 
   },
   blankState: { 
     flex: 1 
@@ -205,9 +204,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     flex: 1
   },
+  iconEmoji: {
+    fontSize: 18,
+    marginBottom: 4
+  },
   navText: {
     fontSize: 10,
-    marginTop: 4,
     color: '#9CA3AF',
     fontWeight: '600'
   },
